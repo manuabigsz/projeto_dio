@@ -4,7 +4,9 @@ import 'model/tarefa_hive_model.dart';
 import 'my_app.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:hive/hive.dart';
+import 'package:sqflite/sqflite.dart';
 
+Future IniciarBancoDeDados() {}
 void main() async {
   // WidgetsFlutterBinding.ensureInitialized();
   // var documentsDirectory =
