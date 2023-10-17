@@ -5,6 +5,7 @@ import 'package:trilhaapp/pages/numeros_aleatorios/numeros_aleatorios_shared_pre
 import '../../pages/configuracoes/configuracoes_hive_page.dart';
 import '../../pages/dados_cadastrais/dados_cadastrais_hive.dart';
 import '../../pages/numeros_aleatorios/numeros_aleatorios_hive.dart';
+import '../../pages/tarefa/tarefa_sql_page.dart';
 
 class CustonDrawer extends StatelessWidget {
   const CustonDrawer({Key? key}) : super(key: key);
@@ -146,6 +147,26 @@ class CustonDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (bc) => const NumerosAleatoriosHivePage()));
+            },
+          ),
+          InkWell(
+            child: Container(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                width: double.infinity,
+                child: Row(
+                  children: const [
+                    Icon(Icons.numbers),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    Text("TarefaSQLITE"),
+                  ],
+                )),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (bc) => const TarefaSQLitePage()));
             },
           ),
           const Divider(),
